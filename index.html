@@ -3,36 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voiceflow Chat</title>
+    <title>Bob 1.0 AI Agent - HVAC Solutions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="vf-chat-container" style="width: 100%; height: 600px;"></div>
+    <header>
+        <div class="logo">BOB 1.0</div>
+        <nav>
+            <button class="demo">Try the Demo</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Experience the Future of HVAC Customer Service</h1>
+        <p>Bob 1.0 handles on-call queries, books appointments, and answers 90% of FAQs without you needing to lift a finger, streamlining your customer service.</p>
+
+        <div class="dashboard-preview">
+            <div class="dashboard-header">
+                <div class="dashboard-logo">Dashboard</div>
+                <div class="user-info">Welcome to Bob 1.0</div>
+            </div>
+            <div class="dashboard-content">
+                <div style="text-align: center; padding: 20px;">
+                    <h2 style="color: #000000; font-size: 32px;"><strong>Welcome to Bob 1.0Your Future HVAC Assistant!</strong></h2>
+                    <p style="font-size: 18px; color: #fff;">
+                        Bob isnt just any AI; hes crafted to make your HVAC business operate more smoothly. Curious how? Jump in and interact with Bobask questions, book a test appointment, or explore his quick responses to common FAQs. Experience firsthand how Bob can streamline your tasks, save time, and keep your customers smiling.
+                    </p>
+                    <h3 style="color: #000000; font-size: 28px;"><strong>Imagine Bob in Your Business!</strong></h3>
+                    <p style="font-size: 18px; color: #fff;">
+                        Picture having Bob on your team, effortlessly managing routine tasks. <br> Like what you see? Let's bring Bob to your business! Contact us, and well tailor Bob to fit your exact needs. With Bob, youre not just staying aheadyoure leading the way in customer service.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <hr>
+            <p>© 2024 Bob 1.0 AI Automation | HVAC Solutions</p>
+        </div>
+    </footer>
 
     <script type="text/javascript">
-      (function(d, t) {
-          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          v.onload = function() {
-            window.voiceflow.chat.init({
-              verify: { projectID: '66bb01bfe0206cda3c190909' },
-              url: 'https://general-runtime.voiceflow.com',
-              versionID: 'production',
-              container: '#vf-chat-container',
-              launch: {
-                autoLaunch: false,
-                embedded: true
-              }
-            }).then(() => {
-              if (!/Mobi|Android/i.test(navigator.userAgent)) {
-                setTimeout(() => {
-                  window.voiceflow.chat.interact({ type: 'launch' });
-                }, 3000);
-              }
-            });
-          };
-          v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-          v.type = "text/javascript";
-          s.parentNode.insertBefore(v, s);
-      })(document, 'script');
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '66bb01bfe0206cda3c190909' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production',
+                    allowDangerousHTML: true
+                }).then(() => {
+                    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+                        setTimeout(() => {
+                            window.voiceflow.chat.open();
+                        }, 3000);
+                    }
+                });
+            };
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
     </script>
 </body>
 </html>

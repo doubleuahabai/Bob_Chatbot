@@ -1,0 +1,229 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1c3d3a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 700;
+    color: #ffb74d;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* Try the Demo Button */
+.demo {
+    background-color: #ffb74d;
+    color: #1c3d3a;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 40px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.demo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Styling */
+main {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 46px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: #d5ff80;
+    text-shadow: 3px 3px 6px #000000;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    opacity: 0.85;
+    animation: fadeInUp 1.2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Preview Styling */
+.dashboard-preview {
+    background-color: #2b4946;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.dashboard-content {
+    color: #cccccc;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #d5ff80;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.user-info {
+    color: #999999;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.dashboard-data {
+    color: #bbbbbb;
+    font-size: 16px;
+}
+
+/* Chat Container Styling */
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1c3d3a;
+    color: white;
+    padding: 15px 20px;
+    border: 2px solid #d5ff80;
+    border-radius: 10px;
+    z-index: 9999;
+    max-width: 300px;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(20px);
+}
+
+.chat-container.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: pulse 2s infinite;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #d5ff80;
+    color: #1c3d3a;
+    transition: background-color 0.3s ease;
+}
+
+.close-icon:hover {
+    background-color: #b8cc67;
+}
+
+.chat-text {
+    font-size: 16px;
+    color: #f0f0f0;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Footer Section */
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-content {
+    background-color: #2b4946;
+    padding: 20px;
+    border-radius: 10px;
+    color: #d5ff80;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+footer hr {
+    border: 0;
+    height: 1px;
+    background: #d5ff80;
+    margin: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0.85;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
