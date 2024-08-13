@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voiceflow Chat</title>
+</head>
+<body>
+    <div id="vf-chat-container" style="width: 100%; height: 600px;"></div>
+
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.init({
+              verify: { projectID: '66bb01bfe0206cda3c190909' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production',
+              container: '#vf-chat-container',
+              launch: {
+                autoLaunch: false,
+                embedded: true
+              }
+            }).then(() => {
+              if (!/Mobi|Android/i.test(navigator.userAgent)) {
+                setTimeout(() => {
+                  window.voiceflow.chat.interact({ type: 'launch' });
+                }, 3000);
+              }
+            });
+          };
+          v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+          v.type = "text/javascript";
+          s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
+</body>
+</html>
