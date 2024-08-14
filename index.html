@@ -10,9 +10,19 @@
     <header>
         <div class="logo">Bob AI</div>
         <nav>
-            <button class="demo">Try the Demo</button>
+            <button class="demo" id="openModal">Try the Demo</button>
         </nav>
     </header>
+
+    <!-- Modal Structure -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Get Access to the Demo</h2>
+            <p>Fill in your details to try out Bob AI for HVAC companies.</p>
+            <!-- Embed Google Form Iframe Here -->
+        </div>
+    </div>
 
     <main>
         <h1>Experience the Future of HVAC Customer Service</h1>
@@ -50,8 +60,7 @@
                 window.voiceflow.chat.load({
                     verify: { projectID: '66bb01bfe0206cda3c190909' },
                     url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production',
-                    allowDangerousHTML: true
+                    versionID: 'production'
                 }).then(() => {
                     if (!/Mobi|Android/i.test(navigator.userAgent)) {
                         setTimeout(() => {
@@ -67,19 +76,23 @@
     </script>
 
     <script>
-        document.addEventListener('click', function(event) {
-            var target = event.target;
-            if (target.id === 'closeIcon') {
-                hideChatContainer();
-            }
-        });
+        // Modal Functionality
+        var modal = document.getElementById("demoModal");
+        var openModalBtn = document.getElementById("openModal");
+        var closeModalBtn = document.getElementById("closeModal");
 
-        var chatContainerClosed = localStorage.getItem('chatContainerClosed');
-        if (!chatContainerClosed) {
-            setTimeout(function() {
-                var chatContainer = document.getElementById('chatContainer');
-                chatContainer.classList.add('show');
-            }, 2000);
+        openModalBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        closeModalBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
     </script>
 </body>
