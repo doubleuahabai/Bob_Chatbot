@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bob 1.0 AI Agent - HVAC Solutions</title>
+    <title>Bob AI 1.0 - HVAC Solutions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">BOB 1.0</div>
+        <div class="logo">Bob AI</div>
         <nav>
             <button class="demo">Try the Demo</button>
         </nav>
@@ -16,7 +16,7 @@
 
     <main>
         <h1>Experience the Future of HVAC Customer Service</h1>
-        <p>Bob 1.0 handles on-call queries, books appointments, and answers 90% of FAQs without you needing to lift a finger, streamlining your customer service.</p>
+        <p>Bob AI handles on-call queries, books appointments, answers 90% of FAQs and book your calendar dates without you needing to lift a finger.</p>
 
         <div class="dashboard-preview">
             <div class="dashboard-header">
@@ -24,27 +24,24 @@
                 <div class="user-info">Welcome to Bob 1.0</div>
             </div>
             <div class="dashboard-content">
-                <div style="text-align: center; padding: 20px;">
-                    <h2 style="color: #000000; font-size: 32px;"><strong>Welcome to Bob 1.0Your Future HVAC Assistant!</strong></h2>
-                    <p style="font-size: 18px; color: #fff;">
-                        Bob isnt just any AI; hes crafted to make your HVAC business operate more smoothly. Curious how? Jump in and interact with Bobask questions, book a test appointment, or explore his quick responses to common FAQs. Experience firsthand how Bob can streamline your tasks, save time, and keep your customers smiling.
-                    </p>
-                    <h3 style="color: #000000; font-size: 28px;"><strong>Imagine Bob in Your Business!</strong></h3>
-                    <p style="font-size: 18px; color: #fff;">
-                        Picture having Bob on your team, effortlessly managing routine tasks. <br> Like what you see? Let's bring Bob to your business! Contact us, and well tailor Bob to fit your exact needs. With Bob, youre not just staying aheadyoure leading the way in customer service.
-                    </p>
-                </div>
+                <h2>Your Favorite HVAC Assistant!</h2>
+                <p>Bob isn’t just any AI; he’s crafted to make your HVAC business operate more smoothly. Curious how? Jump in and interact with Bob—ask questions, book a test appointment, or explore his quick responses to common FAQs. Experience firsthand how Bob can streamline your tasks, save time, and keep your customers smiling.</p>
+                <h3>Why Enroll Bob Into Your Business?</h3>
+                <p>Picture having Bob on your team, effortlessly managing routine tasks. Like what you see? Let's bring Bob to your business! Contact us, and we’ll tailor Bob to fit your exact needs. With Bob, you’re not just staying ahead—you’re leading the way in customer service.</p>
             </div>
         </div>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <hr>
-            <p>� 2024 Bob 1.0 AI Automation | HVAC Solutions</p>
+            <p>© 2024 Bob AI Automation | HVAC Solutions</p>
         </div>
     </footer>
+
+    <div id="chatContainer" class="chat-container">
+        Got Questions? Demo Bob Today! 🕵️‍♂️
+    </div>
 
     <script type="text/javascript">
         (function(d, t) {
@@ -67,6 +64,23 @@
             v.type = "text/javascript";
             s.parentNode.insertBefore(v, s);
         })(document, 'script');
+    </script>
+
+    <script>
+        document.addEventListener('click', function(event) {
+            var target = event.target;
+            if (target.id === 'closeIcon') {
+                hideChatContainer();
+            }
+        });
+
+        var chatContainerClosed = localStorage.getItem('chatContainerClosed');
+        if (!chatContainerClosed) {
+            setTimeout(function() {
+                var chatContainer = document.getElementById('chatContainer');
+                chatContainer.classList.add('show');
+            }, 2000);
+        }
     </script>
 </body>
 </html>
