@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1c3d3a;
+    background-color: #1c3d3a; /* Dark background, unchanged */
     color: #f0f0f0;
     margin: 0;
     padding: 20px;
@@ -18,13 +18,13 @@ header {
 .logo {
     font-size: 31px;
     font-weight: 700;
-    color: #ffb74d;
+    color: #4da8ff; /* Updated to blue */
     text-shadow: 2px 2px 4px #000000;
 }
 
 /* Try the Demo Button */
 .demo {
-    background-color: #ffb74d;
+    background-color: #4da8ff; /* Updated to blue */
     color: #1c3d3a;
     font-weight: bold;
     border: none;
@@ -73,7 +73,7 @@ main {
 }
 
 .close {
-    color: #ffb74d;
+    color: #4da8ff; /* Updated to blue */
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -82,13 +82,13 @@ main {
 
 .close:hover,
 .close:focus {
-    color: #ffcc80;
+    color: #80bfff; /* Slightly lighter blue for hover/focus */
     text-decoration: none;
 }
 
 .modal-content h2 {
     margin-top: 0;
-    color: #d5ff80;
+    color: #80bfff; /* Light blue for headings */
 }
 
 .modal-content p {
@@ -113,7 +113,7 @@ h1 {
     font-size: 34px;
     margin-bottom: 25px;
     text-transform: uppercase;
-    color: #d5ff80;
+    color: #80bfff; /* Light blue for headings */
     text-shadow: 3px 3px 6px #000000;
     animation: fadeInDown 1s ease-in-out;
 }
@@ -145,7 +145,7 @@ p {
 
 .dashboard-welcome {
     font-size: 26px;
-    color: #d5ff80;
+    color: #80bfff; /* Light blue for headings */
     text-shadow: 2px 2px 4px #000000;
     margin: 0;
 }
@@ -153,7 +153,7 @@ p {
 .dashboard-logo {
     font-weight: 700;
     font-size: 24px;
-    color: #d5ff80;
+    color: #80bfff; /* Light blue for headings */
     text-shadow: 2px 2px 4px #000000;
     position: absolute;
     top: 0;
@@ -174,10 +174,11 @@ p {
 
 .dashboard-subheading {
     font-size: 22px;
-    color: #d5ff80;
+    color: #80bfff; /* Light blue for subheadings */
     text-shadow: 2px 2px 4px #000000;
     margin-top: 30px;
 }
+
 /* Chat Container Styling */
 .chat-container {
     position: fixed;
@@ -185,7 +186,7 @@ p {
     right: 10px;
     color: white;
     padding: 2px 6px;
-    border: 2px solid #d5ff80;
+    border: 2px solid #80bfff; /* Light blue border */
     border-radius: 13px;
     z-index: 9961;
     max-width: 307px;
@@ -213,13 +214,13 @@ p {
     text-align: center;
     cursor: pointer;
     border-radius: 50%;
-    background-color: #d5ff80;
+    background-color: #80bfff; /* Light blue for close icon */
     color: #1c3d3a;
     transition: background-color 0.3s ease;
 }
 
 .close-icon:hover {
-    background-color: #b8cc67;
+    background-color: #4da8ff; /* Darker blue on hover */
 }
 
 /* Footer Section */
@@ -232,7 +233,7 @@ footer {
     background-color: #2b4946;
     padding: 20px;
     border-radius: 10px;
-    color: #d5ff80;
+    color: #80bfff; /* Light blue for footer text */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1.5s ease-in-out;
 }
@@ -240,7 +241,7 @@ footer {
 footer hr {
     border: 0;
     height: 1px;
-    background: #d5ff80;
+    background: #80bfff; /* Light blue for divider */
     margin: 20px 0;
 }
 
