@@ -182,20 +182,21 @@ p {
 /* Chat Container Styling */
 .chat-container {
     position: fixed;
-    bottom: 109px;
-    right: 10px;
+    bottom: 100px;
+    right: 6px;
     color: white;
     padding: 2px 6px;
-    border: 2px solid #ffcc80; /* Light blue border */
-    border-radius: 13px;
+    border: 2px solid #d5ff80;
+    border-radius: 11px;
     z-index: 9961;
-    max-width: 307px;
+    max-width: 256px;
     text-align: right;
     opacity: 1; /* Initially hidden */
     transition: opacity 0.4s ease, transform 0.4s ease;
     transform: translateY(20px);
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
+    font-size: 14px; /* Adjust this value to reduce font size */
 }
 
 .chat-container.show {
