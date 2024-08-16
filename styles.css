@@ -182,7 +182,7 @@ p {
 /* Chat Container Styling */
 .chat-container {
     position: fixed;
-    bottom: 100px;
+    bottom: 105px;
     right: 6px;
     color: white;
     padding: 2px 6px;
