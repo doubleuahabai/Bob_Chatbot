@@ -16,7 +16,7 @@ header {
 }
 
 .logo {
-    font-size: 31px;
+    font-size: 28px;
     font-weight: 700;
     color: #4da8ff; /* Updated to blue */
     text-shadow: 2px 2px 4px #000000;
@@ -110,7 +110,7 @@ main {
 
 h1 {
     font-family: 'Poppins', sans-serif; /* Updated font */
-    font-size: 34px;
+    font-size: 32px;
     margin-bottom: 25px;
     text-transform: uppercase;
     color: #80bfff; /* Light blue for headings */
